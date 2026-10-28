@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Generate per-platform FILES.md from the plugin manifest."""
+"""Generate per-pet, per-platform FILES-<pet>.md from the plugin manifest."""
 
 from __future__ import annotations
 
@@ -59,6 +59,12 @@ def human_size(size: int) -> str:
     return f"{size} B"
 
 
+MODEL_NAMES = {
+    "angel": "能天使",
+    "angel2": "新约能天使",
+}
+
+
 def describe(path: str) -> str:
     p = path.replace("\\", "/")
     name = Path(p).name
@@ -66,6 +72,19 @@ def describe(path: str) -> str:
 
     if name == "avatar.png" and "/spine/" not in p:
         return "应用内头像"
+
+    if p.startswith("public/models/"):
+        parts = p.split("/")
+        model = parts[2] if len(parts) > 2 else ""
+        label = MODEL_NAMES.get(model, model or "Spine 模型")
+        if "_white" in name:
+            label += "（白调光翼）"
+        if name.endswith(".skel"):
+            return f"{label}：二进制骨架与动画数据"
+        if name.endswith(".atlas"):
+            return f"{label}：贴图图集描述"
+        if name.endswith(".png"):
+            return f"{label}：贴图"
 
     if "/spine/" in p or p.startswith("spine/"):
         parts = p.split("/")
@@ -95,12 +114,14 @@ def describe(path: str) -> str:
 def render(platform: str, manifest: dict) -> str:
     if manifest.get("extract_root") == "app":
         extract_label = "应用目录（Windows 程序所在目录）"
+    elif manifest.get("extract_root") == "project":
+        extract_label = "项目根目录（解压后素材落在 `public/models/`）"
     else:
         extract_label = f"`filesDir/plugins/{manifest['pet']}/{manifest['asset_version']}/`"
     lines = [
         f"# {PLATFORM_LABEL[platform]} 文件清单（{manifest['pet']}）",
         "",
-        "> 由 `tools/build_file_docs.py` 自动生成；逐文件 SHA-256 见同目录的 `angelina.json`。",
+        f"> 由 `tools/build_file_docs.py` 自动生成；逐文件 SHA-256 见同目录的 `{manifest['pet']}.json`。",
         "",
         f"- 素材包：`{manifest['package']}`",
         f"- 解压根：{extract_label}",
@@ -129,7 +150,7 @@ def main() -> int:
             print(f"skip: {manifest_path}")
             continue
         manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-        output = REPO_ROOT / platform / "FILES.md"
+        output = REPO_ROOT / platform / f"FILES-{args.pet}.md"
         output.write_text(render(platform, manifest), encoding="utf-8")
         print(f"wrote {output} ({manifest['file_count']} files)")
     return 0

@@ -68,8 +68,22 @@ PET_SPECS = {
             },
         },
     },
-    # Future pets (for example the troublemaker desktop pet) add their own
-    # spec here. Keep each pet's source roots and package entries separate.
+    "trickster": {
+        "display_name": "捣蛋鬼",
+        "roots": {
+            "windows": Path(r"D:\Anacoda项目\捣蛋鬼计划"),
+        },
+        "platforms": {
+            "windows": {
+                "extract_root": "project",
+                "entries": [
+                    ("public/models", "public/models"),
+                ],
+            },
+        },
+    },
+    # Future pets add their own spec here. Keep each pet's source roots and
+    # package entries separate.
 }
 
 

@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "pet": "trickster",
+  "pet_name": "捣蛋鬼",
+  "platform": "windows",
+  "asset_version": "1.0.0",
+  "release_tag": "trickster-assets-v1",
+  "package": "windows.zip",
+  "url": "https://github.com/JNGKZbird/Arknights-Desktop-Pets-Archive/releases/download/trickster-assets-v1/windows.zip",
+  "sha256": "08cedc78254fc3ab4d370d15e7cdf65f98fc415b751a98e33bc9702c267ab87d",
+  "size": 975229,
+  "file_count": 9,
+  "uncompressed_size": 1397044,
+  "extract_root": "project",
+  "files": [
+    {
+      "path": "public/models/angel/build_char_103_angel.atlas",
+      "size": 4058,
+      "sha256": "f86f0c5430194ce9db63b461511b100d5e5c3eba5d56d4542998ba1ba76129f7"
+    },
+    {
+      "path": "public/models/angel/build_char_103_angel.png",
+      "size": 154766,
+      "sha256": "b3844018ca19b7c56c13ebeab7ec06b701f4d477b6912f6da299d3aa6d075e13"
+    },
+    {
+      "path": "public/models/angel/build_char_103_angel.skel",
+      "size": 81856,
+      "sha256": "55850a5b73f312eb1fa5bc164da42e9baae6545540cd4c0191476196b57caec7"
+    },
+    {
+      "path": "public/models/angel/build_char_103_angel_white.atlas",
+      "size": 4357,
+      "sha256": "63f963015cd502c014ac799e144d13a54cfa6c065b78baac71c2ab97ba6f3d74"
+    },
+    {
+      "path": "public/models/angel/build_char_103_angel_white.png",
+      "size": 152223,
+      "sha256": "77a18e61fd7874c336513be5fa49fd4e794885e3522a7edc56d318e26ca2bc85"
+    },
+    {
+      "path": "public/models/angel/build_char_103_angel_white.skel",
+      "size": 81856,
+      "sha256": "55850a5b73f312eb1fa5bc164da42e9baae6545540cd4c0191476196b57caec7"
+    },
+    {
+      "path": "public/models/angel2/build_char_1041_angel2.atlas",
+      "size": 21798,
+      "sha256": "ba51ed4b60eca1d59801897a336a442e633d2b29c9abc91c499358a16c34d40b"
+    },
+    {
+      "path": "public/models/angel2/build_char_1041_angel2.png",
+      "size": 515309,
+      "sha256": "d00a629e8d1f0c9558d517995c848b9041c808d07afbf8b8b7115f84d4e9560d"
+    },
+    {
+      "path": "public/models/angel2/build_char_1041_angel2.skel",
+      "size": 380821,
+      "sha256": "42d2c519b25da82a697bcfb684adf1d46ccab0d2b4120150bd92eb1730c24071"
+    }
+  ],
+  "notice": "Assets are copyright Hypergryph. No license is granted. Personal non-commercial use only."
+}

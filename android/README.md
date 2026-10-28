@@ -20,7 +20,7 @@
 
 Skill 文本仍在 Android 代码仓库的 assets 中，不在这个 zip 内。
 
-每个文件的路径、大小和用途见 [FILES.md](FILES.md)。
+每个文件的路径、大小和用途见 [FILES-angelina.md](FILES-angelina.md)。
 
 ## 校验与安装
 
