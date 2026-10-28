@@ -33,7 +33,7 @@
 
 ## trickster
 
-`trickster.json` 是捣蛋鬼在 Windows 端的插件定义。角色为两名萨科塔：能天使与新约能天使。
+`trickster.json` 是捣蛋鬼在 Windows 端的插件定义。角色为能天使与新约能天使。
 
 - 文件：`windows.zip`
 - 大小：975,229 字节（约 0.9 MiB）
@@ -48,7 +48,7 @@
 - `public/models/angel/` — 能天使：基建 Q 版默认皮与白调光翼变体
 - `public/models/angel2/` — 新约能天使：基建 Q 版默认皮
 
-当前只含两名萨科塔的基建 Q 版默认形象，皮肤包尚未纳入。捣蛋鬼目前按源码运行，解压后手动放置到 `public/models/`；应用内下载尚未接入。
+当前只含能天使 / 新约能天使的基建 Q 版默认形象，皮肤包尚未纳入。捣蛋鬼目前按源码运行，解压后手动放置到 `public/models/`；应用内下载尚未接入。
 
 每个文件的路径、大小和用途见 [FILES-trickster.md](FILES-trickster.md)。
 

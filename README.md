@@ -62,14 +62,14 @@ dist/<pet>/<platform>.zip     # 构建产物，gitignored，发布到 Releases
 | pet | 名称 | 状态 |
 |---|---|---|
 | `angelina` | 予愿安洁莉娜 | 已接入 |
-| `trickster` | 捣蛋鬼桌宠（能天使 / 新约能天使，两名萨科塔） | 已接入（Windows，预览版） |
+| `trickster` | 捣蛋鬼桌宠（能天使 / 新约能天使） | 已接入（Windows，预览版） |
 
 ## 发布包
 
 | 平台 | pet | 发布文件 | 内容 |
 |---|---|---|---|
 | Windows | angelina | `windows.zip` | `pets/予愿安洁莉娜/{spine,voice_cn,voice_jp}`、`pets/技能图标`、`assets/avatar.png` |
-| Windows | trickster | `windows.zip` | `public/models/{angel,angel2}`，两名萨科塔的基建 Q 版默认形象 |
+| Windows | trickster | `windows.zip` | `public/models/{angel,angel2}`，能天使 / 新约能天使的基建 Q 版默认形象 |
 | HarmonyOS | angelina | `harmonyos.zip` | `spine`、`voice`、`voice_jp`、`avatar.png`，解压到 `filesDir/plugins/angelina/<版本>/` |
 | Android | angelina | `android.zip` | `spine`、`voice`、`voice_jp`，解压到 `filesDir/plugins/angelina/<版本>/` |
 
